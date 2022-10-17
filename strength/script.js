@@ -32,11 +32,15 @@ weights = [
   [36,45,54,0,0,0,0,0,0]
 ];
 
+week = 1;
+
+var alert_select_value = function (select_obj){
+  week = select_obj.selectedIndex + 1;
+};
 
 
 $('#start').click(function(){
   onerm = Number($("#onerm").val());
-  week = $("#slider1").val()
   $(".order1").text(orders[week-1][0]);
   $(".order2").text(orders[week-1][1]);
   $(".order3").text(orders[week-1][2]);
