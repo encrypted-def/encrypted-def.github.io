@@ -1,0 +1,103 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>스트렝스 프로그램 - 크로스핏 암스트롱</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <style>
+  @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); font-family: 'Noto Sans KR', sans-serif;
+
+  .tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+
+
+.slider-width100
+{
+    width: 400px;
+}
+</style>
+</head>
+
+<body>
+
+
+  <div id="setting">
+    <input type="range" id="slider1" class="slider-width100" value="1" min="1" max="7"> </input>
+    <p style="font-family: Noto Sans KR;" class = "info1">Week 1</p>
+    <p style="font-family: Noto Sans KR;"> 1RM <input type="text"  id = "onerm"> </p>
+    <button type="button" class="btn btn btn-info" id="start"> GO </button>
+    <p></p>
+  </div>
+
+
+  <table class="tg">
+    <thead>
+      <tr>
+        <th class="tg-0pky">순서</th>
+        <th class="tg-0lax">횟수</th>
+        <th class="tg-0lax">무게</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order1"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep1"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight1"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order2"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep2"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight2"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order3"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep3"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight3"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order4"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep4"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight4"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order5"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep5"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight5"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order6"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep6"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight6"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order7"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep7"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight7"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order8"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep8"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight8"> - </p></td>
+      </tr>
+      <tr>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "order9"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "rep9"> - </p></td>
+        <td class="tg-0lax"><p style="font-family: Noto Sans KR;" class = "weight9"> - </p></td>
+      </tr>
+    </tbody>
+    </table>
+
+    <p style="font-family: Noto Sans KR;">조커를 1셋도 못해도 본전이고, 보통 많아야 2셋까지 갑니다.</p>
+    <p style="font-family: Noto Sans KR;">워밍업+본셋+PR세트까지는 반드시 해야합니다. 그러나 조커셋은 반드시 해야할 필요가 없으며 PR세트가 끝나고 나서도 몸상태가 좋을때만 들어가면 됩니다. (오버트레이닝 주의)</p>
+    
+</body>
+
+<script type="text/javascript" src="./script.js"></script>
+
+</html>
