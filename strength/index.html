@@ -9,18 +9,38 @@
   @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); font-family: 'Noto Sans KR', sans-serif;
 
   .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:'Noto Sans KR';font-size:36px;
+  overflow:hidden;padding:5px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:'Noto Sans KR';font-size:36px;
+  font-weight:normal;overflow:hidden;padding:5px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:center;vertical-align:center}
+.tg .tg-0lax{text-align:center;vertical-align:center}
 
 
-.slider-width100
-{
-    width: 400px;
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  
+  font-family: "Noto Sans KR;", sans-serif;
+
+  
+  color: #444;
+  background-color: #fff;
+  
+  padding: 2px 5px;
+  margin: 1px 3px;
+  
 }
+
+#wrap {
+  float: left;
+  margin: 1px 0px;
+}
+
+
+
 </style>
 </head>
 
@@ -28,10 +48,28 @@
 
 
   <div id="setting">
-    <input type="range" id="slider1" class="slider-width100" value="1" min="1" max="7"> </input>
-    <p style="font-family: Noto Sans KR;" class = "info1">Week 1</p>
-    <p style="font-family: Noto Sans KR;"> 1RM <input type="text"  id = "onerm"> </p>
-    <button type="button" class="btn btn btn-info" id="start"> GO </button>
+
+
+    <div id="wrap">
+      <p style="font-family: Noto Sans KR; font-size: 36px; margin: 1px 0px;"> <input type="text"  id = "onerm" placeholder="1RM 입력 💪💪"> </p>
+    </div>
+
+    <div id="wrap">
+
+    <select id="week" style="font-family: Noto Sans KR; font-size: 36px" onchange="alert_select_value(this);"> 
+      <option value="1">Week 1</option>
+      <option value="2">Week 2</option>
+      <option value="3">Week 3</option>
+      <option value="4">Week 4</option>
+      <option value="5">Week 5</option>
+      <option value="6">Week 6</option>
+      <option value="7">Week 7</option>
+    </select>
+  </div>
+    
+
+  <div>
+  <button type="button" class="btn btn btn-info" id="start" style="font-family: Noto Sans KR; font-size: 36px"> GO! </button>
     <p></p>
   </div>
 
@@ -93,8 +131,7 @@
     </tbody>
     </table>
 
-    <p style="font-family: Noto Sans KR;">조커를 1셋도 못해도 본전이고, 보통 많아야 2셋까지 갑니다.</p>
-    <p style="font-family: Noto Sans KR;">워밍업+본셋+PR세트까지는 반드시 해야합니다. 그러나 조커셋은 반드시 해야할 필요가 없으며 PR세트가 끝나고 나서도 몸상태가 좋을때만 들어가면 됩니다. (오버트레이닝 주의)</p>
+    <p style="font-family: Noto Sans KR; font-size: 36px; word-break:break-all; padding:10px 10px;">조커를 1셋도 못해도 본전이고, 보통 많아야 2셋까지 갑니다. 워밍업+본셋+PR세트까지는 반드시 해야합니다. 그러나 조커셋은 반드시 해야할 필요가 없으며 PR세트가 끝나고 나서도 몸상태가 좋을때만 들어가면 됩니다. (오버트레이닝 주의)</p>
     
 </body>
 
