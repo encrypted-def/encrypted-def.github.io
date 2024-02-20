@@ -314,7 +314,7 @@ function performCalculation() {
         for(var j = 0; j < 10; j++)
             bottom10[i][1][j] += 1;
 
-        result += "하위 "  + i + 위 : 타순 (" + bottom10[i][1] + "), 평균 득점 " + bottom10[i][0] + "점<br>";
+        result += "하위 "  + i + "위 : 타순 (" + bottom10[i][1] + "), 평균 득점 " + bottom10[i][0] + "점<br>";
     }
 
 
