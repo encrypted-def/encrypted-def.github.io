@@ -232,6 +232,11 @@ function performCalculation() {
         top10[i] = [-1, arr.slice()]
     }
 
+    var bottom10 = new Array(10);
+    for(var i = 0; i < 10; i++){
+        bottom10[i] = [10000000, arr.slice()]
+    }
+
     ctr = 0
     do{
         ctr += 1
@@ -278,6 +283,17 @@ function performCalculation() {
             }
         }
 
+        for(var i = 0; i < 10; i++){
+            if(new_elem < bottom10[i]){
+                for(var j = 9; j > i; j--){
+                    bottom10[j] = bottom10[j-1];
+                }
+                bottom10[i] = new_elem;
+                break;
+            }
+        }
+
+
     }while(nextPermutation(arr));
 
     result = "";
@@ -288,8 +304,19 @@ function performCalculation() {
         for(var j = 0; j < 10; j++)
             top10[i][1][j] += 1;
 
-        result += i + "위 : 타순 (" + top10[i][1] + "), 평균 득점 " + top10[i][0] + "점<br>";
+        result += "상위 " + i + "위 : 타순 (" + top10[i][1] + "), 평균 득점 " + top10[i][0] + "점<br>";
     }
+    
+    for(var i = 0; i < 10; i++){
+        if(bottom10[i][0] == 10000000)
+            break;
+
+        for(var j = 0; j < 10; j++)
+            bottom10[i][1][j] += 1;
+
+        result += "하위 "  + i + 위 : 타순 (" + bottom10[i][1] + "), 평균 득점 " + bottom10[i][0] + "점<br>";
+    }
+
 
     document.getElementById("status").innerHTML = result;
 }
