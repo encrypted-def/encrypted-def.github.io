@@ -264,7 +264,6 @@ function performCalculation() {
         if(!is_check)
             continue;
 
-        // console.log(arr)
 
         T = 100; // 반복 횟수
         avg_score = 0;
@@ -274,7 +273,7 @@ function performCalculation() {
 
         new_elem = [avg_score, arr.slice()]
         for(var i = 0; i < 10; i++){
-            if(new_elem > top10[i]){
+            if(new_elem[0] > top10[i][0]){
                 for(var j = 9; j > i; j--){
                     top10[j] = top10[j-1];
                 }
@@ -284,7 +283,7 @@ function performCalculation() {
         }
 
         for(var i = 0; i < 10; i++){
-            if(new_elem < bottom10[i]){
+            if(new_elem[0] < bottom10[i][0]){
                 for(var j = 9; j > i; j--){
                     bottom10[j] = bottom10[j-1];
                 }
@@ -306,7 +305,9 @@ function performCalculation() {
 
         result += "상위 " + i + "위 : 타순 (" + top10[i][1] + "), 평균 득점 " + top10[i][0] + "점<br>";
     }
-    
+
+    result += "<br>";
+
     for(var i = 0; i < 10; i++){
         if(bottom10[i][0] == 10000000)
             break;
